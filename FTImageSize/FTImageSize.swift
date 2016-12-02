@@ -25,7 +25,7 @@ extension FTImageSize {
     }
 }
 
-class FTImageSize: NSObject {
+public class FTImageSize: NSObject {
     
     // MARK: - getImageSize
     fileprivate class func getImageSize(_ imageURL:String) ->CGSize {
