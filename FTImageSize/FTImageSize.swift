@@ -8,19 +8,19 @@
 
 import UIKit
 
-extension FTImageSize {
+public extension FTImageSize {
     
-    internal class func getImageSizeFromImageURL(_ imageURL:String, perferdSize: CGSize) ->CGSize {
-        return self.convertSize(size: self.getImageSize(imageURL), perferdSize: perferdSize)
+    public class func getImageSizeFromImageURL(_ imageURL:String, perferdWidth: CGFloat) -> CGSize {
+        return self.convertSize(size: self.getImageSize(imageURL), perferdWidth: perferdWidth)
     }
     
-    fileprivate class func convertSize(size :CGSize, perferdSize: CGSize) -> CGSize {
+    fileprivate class func convertSize(size :CGSize, perferdWidth: CGFloat) -> CGSize {
         var convertedSize : CGSize = CGSize.zero
         if size.width == 0 || size.height == 0 {
-            return perferdSize
+            return CGSize(width: perferdWidth, height: perferdWidth)
         }
-        convertedSize.width = perferdSize.width
-        convertedSize.height = max((size.height * perferdSize.width) / size.width, perferdSize.height)
+        convertedSize.height = perferdWidth
+        convertedSize.height = (size.height * perferdWidth) / size.width
         return convertedSize
     }
 }
