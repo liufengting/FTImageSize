@@ -19,7 +19,7 @@ public extension FTImageSize {
         if size.width == 0 || size.height == 0 {
             return CGSize(width: perferdWidth, height: perferdWidth)
         }
-        convertedSize.height = perferdWidth
+        convertedSize.width = perferdWidth
         convertedSize.height = (size.height * perferdWidth) / size.width
         return convertedSize
     }
