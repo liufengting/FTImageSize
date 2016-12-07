@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "FTImageSize"
-  s.version      = "0.0.2"
+  s.version      = "0.0.3"
   s.summary      = "Get image size from image url synchronously"
   s.description  = <<-DESC
     	FTImageSize. Get image size from image url synchronously.
