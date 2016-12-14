@@ -3,32 +3,60 @@
 //  FTImageSize
 //
 //  Created by liufengting on 02/12/2016.
-//  Copyright © 2016 LiuFengting. All rights reserved.
+//  Copyright © 2016 LiuFengting (https://github.com/liufengting) . All rights reserved.
 //
 
 import UIKit
 
 public extension FTImageSize {
     
-    public class func getImageSizeFromImageURL(_ imageURL:String, perferdWidth: CGFloat) -> CGSize {
-        return self.convertSize(size: self.getImageSize(imageURL), perferdWidth: perferdWidth)
+    /// get image size, with perfered width
+    ///
+    /// - Parameters:
+    ///   - imageURL: image url
+    ///   - perferdWidth: perferd Width
+    /// - Returns: image size
+    public static func getImageSizeFromImageURL(_ imageURL:String, perferdWidth: CGFloat) -> CGSize {
+        return self.convertSize(size: self.getImageSize(imageURL), perferdWidth: perferdWidth, maxHeight: CGFloat(MAXFLOAT))
     }
     
-    fileprivate class func convertSize(size :CGSize, perferdWidth: CGFloat) -> CGSize {
+    /// get image size, with perfered width and max height
+    ///
+    /// - Parameters:
+    ///   - imageURL: image url
+    ///   - perferdWidth: perferd Width
+    ///   - maxHeight: max height
+    /// - Returns: image size
+    public static func getImageSizeFromImageURL(_ imageURL:String, perferdWidth: CGFloat, maxHeight: CGFloat) -> CGSize {
+        return self.convertSize(size: self.getImageSize(imageURL), perferdWidth: perferdWidth, maxHeight: maxHeight)
+    }
+    
+    /// private function: convertImageSize
+    ///
+    /// - Parameters:
+    ///   - size: original image size
+    ///   - perferdWidth: perfered width
+    ///   - maxHeight: max height
+    /// - Returns: image size
+    fileprivate static func convertSize(size :CGSize, perferdWidth: CGFloat, maxHeight: CGFloat) -> CGSize {
         var convertedSize : CGSize = CGSize.zero
         if size.width == 0 || size.height == 0 {
             return CGSize(width: perferdWidth, height: perferdWidth)
         }
         convertedSize.width = perferdWidth
-        convertedSize.height = (size.height * perferdWidth) / size.width
+        convertedSize.height = min((size.height * perferdWidth) / size.width, maxHeight)
         return convertedSize
     }
 }
 
 public class FTImageSize: NSObject {
     
-    // MARK: - getImageSize
-    fileprivate class func getImageSize(_ imageURL:String) ->CGSize {
+    
+    /// get remote image original size with image url
+    ///
+    /// - Parameter imageURL: image url
+    /// - Returns: image original size
+    public class func getImageSize(_ imageURL:String) ->CGSize {
         var URL:Foundation.URL?
         if imageURL.isKind(of: NSString.self) {
             URL = Foundation.URL(string: imageURL)
@@ -59,7 +87,11 @@ public class FTImageSize: NSObject {
         return size
     }
     
-    // MARK: - getPNGImageSize
+    
+    /// private function: getPNGImageSize
+    ///
+    /// - Parameter request: image request
+    /// - Returns: image original size
     fileprivate class func getPNGImageSize(_ request:NSMutableURLRequest) -> CGSize {
         request.setValue("bytes=16-23", forHTTPHeaderField: "Range")
         guard let data = try? NSURLConnection.sendSynchronousRequest(request as URLRequest, returning: nil) else {
@@ -91,7 +123,10 @@ public class FTImageSize: NSObject {
         return CGSize.zero;
     }
     
-    // MARK: - getGIFImageSize
+    /// private function: getGIFImageSize
+    ///
+    /// - Parameter request: image request
+    /// - Returns: image original size
     fileprivate class func getGIFImageSize(_ request:NSMutableURLRequest) -> CGSize {
         request.setValue("bytes=6-9", forHTTPHeaderField: "Range")
         guard let data = try? NSURLConnection.sendSynchronousRequest(request as URLRequest, returning: nil) else {
@@ -117,7 +152,10 @@ public class FTImageSize: NSObject {
         return CGSize.zero;
     }
     
-    // MARK: - getJPGImageSize
+    /// private function: getJPGImageSize
+    ///
+    /// - Parameter request: image request
+    /// - Returns: image original size
     fileprivate class func getJPGImageSize(_ request:NSMutableURLRequest) -> CGSize {
         request.setValue("bytes=0-209", forHTTPHeaderField: "Range")
         guard let data = try? NSURLConnection.sendSynchronousRequest(request as URLRequest, returning: nil) else {
@@ -188,6 +226,3 @@ public class FTImageSize: NSObject {
         }
     }
 }
-
-
-
