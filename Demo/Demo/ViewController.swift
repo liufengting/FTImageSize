@@ -2,8 +2,7 @@
 //  ViewController.swift
 //  Demo
 //
-//  Created by liufengting on 02/12/2016.
-//  Copyright © 2016 LiuFengting. All rights reserved.
+//  Created by LiuFengting on 2021/7/6.
 //
 
 import UIKit
@@ -12,8 +11,9 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        // Do any additional setup after loading the view.
     }
+
 
 }
 
