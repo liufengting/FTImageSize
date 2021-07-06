@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "FTImageSize"
-  s.version      = "0.0.4"
+  s.version      = "0.0.5"
   s.summary      = "Get image size from image url synchronously"
   s.description  = <<-DESC
     	FTImageSize. Get image size from image url synchronously.
@@ -13,6 +13,6 @@ Pod::Spec.new do |s|
   s.platform     = :ios, "8.0"
   s.source       = { :git => "https://github.com/liufengting/FTImageSize.git", :tag => "#{s.version}" }
   s.source_files = ["FTImageSize/*.swift"]
-  s.pod_target_xcconfig = { 'SWIFT_VERSION' => '3.0' }
+  s.pod_target_xcconfig = { 'SWIFT_VERSION' => '5.0' }
 
 end
