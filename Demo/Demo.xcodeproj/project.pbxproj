@@ -8,22 +8,43 @@
 
 /* Begin PBXBuildFile section */
 		2A52C0A02693F22A003DFE48 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A52C09F2693F22A003DFE48 /* AppDelegate.swift */; };
-		2A52C0A22693F22A003DFE48 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A52C0A12693F22A003DFE48 /* SceneDelegate.swift */; };
 		2A52C0A42693F22A003DFE48 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A52C0A32693F22A003DFE48 /* ViewController.swift */; };
 		2A52C0A72693F22A003DFE48 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A52C0A52693F22A003DFE48 /* Main.storyboard */; };
 		2A52C0A92693F22A003DFE48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A52C0A82693F22A003DFE48 /* Assets.xcassets */; };
 		2A52C0AC2693F22A003DFE48 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A52C0AA2693F22A003DFE48 /* LaunchScreen.storyboard */; };
+		2ACF1356293ED34200D5A476 /* FTWaterFallLayout in Frameworks */ = {isa = PBXBuildFile; productRef = 2ACF1355293ED34200D5A476 /* FTWaterFallLayout */; };
+		2ACF1359293ED3D000D5A476 /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACF1357293ED3D000D5A476 /* HomeCollectionViewCell.swift */; };
+		2ACF135A293ED3D000D5A476 /* HomeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2ACF1358293ED3D000D5A476 /* HomeCollectionViewCell.xib */; };
+		2ACF135D293ED4A400D5A476 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 2ACF135C293ED4A400D5A476 /* Kingfisher */; };
+		2ACF1360293ED4FE00D5A476 /* FTImageSize.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2ACF135F293ED4FE00D5A476 /* FTImageSize.framework */; };
+		2ACF1361293ED4FE00D5A476 /* FTImageSize.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2ACF135F293ED4FE00D5A476 /* FTImageSize.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		2ACF1362293ED4FF00D5A476 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				2ACF1361293ED4FE00D5A476 /* FTImageSize.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		2A52C09C2693F22A003DFE48 /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A52C09F2693F22A003DFE48 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2A52C0A12693F22A003DFE48 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		2A52C0A32693F22A003DFE48 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2A52C0A62693F22A003DFE48 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2A52C0A82693F22A003DFE48 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2A52C0AB2693F22A003DFE48 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2A52C0AD2693F22A003DFE48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2ACF1357293ED3D000D5A476 /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
+		2ACF1358293ED3D000D5A476 /* HomeCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeCollectionViewCell.xib; sourceTree = "<group>"; };
+		2ACF135F293ED4FE00D5A476 /* FTImageSize.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FTImageSize.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +52,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2ACF135D293ED4A400D5A476 /* Kingfisher in Frameworks */,
+				2ACF1356293ED34200D5A476 /* FTWaterFallLayout in Frameworks */,
+				2ACF1360293ED4FE00D5A476 /* FTImageSize.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +66,7 @@
 			children = (
 				2A52C09E2693F22A003DFE48 /* Demo */,
 				2A52C09D2693F22A003DFE48 /* Products */,
+				2ACF135E293ED4FE00D5A476 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,14 +82,23 @@
 			isa = PBXGroup;
 			children = (
 				2A52C09F2693F22A003DFE48 /* AppDelegate.swift */,
-				2A52C0A12693F22A003DFE48 /* SceneDelegate.swift */,
 				2A52C0A32693F22A003DFE48 /* ViewController.swift */,
+				2ACF1357293ED3D000D5A476 /* HomeCollectionViewCell.swift */,
+				2ACF1358293ED3D000D5A476 /* HomeCollectionViewCell.xib */,
 				2A52C0A52693F22A003DFE48 /* Main.storyboard */,
 				2A52C0A82693F22A003DFE48 /* Assets.xcassets */,
 				2A52C0AA2693F22A003DFE48 /* LaunchScreen.storyboard */,
 				2A52C0AD2693F22A003DFE48 /* Info.plist */,
 			);
 			path = Demo;
+			sourceTree = "<group>";
+		};
+		2ACF135E293ED4FE00D5A476 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2ACF135F293ED4FE00D5A476 /* FTImageSize.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,12 +111,17 @@
 				2A52C0982693F22A003DFE48 /* Sources */,
 				2A52C0992693F22A003DFE48 /* Frameworks */,
 				2A52C09A2693F22A003DFE48 /* Resources */,
+				2ACF1362293ED4FF00D5A476 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = Demo;
+			packageProductDependencies = (
+				2ACF1355293ED34200D5A476 /* FTWaterFallLayout */,
+				2ACF135C293ED4A400D5A476 /* Kingfisher */,
+			);
 			productName = Demo;
 			productReference = 2A52C09C2693F22A003DFE48 /* Demo.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +150,10 @@
 				Base,
 			);
 			mainGroup = 2A52C0932693F22A003DFE48;
+			packageReferences = (
+				2ACF1354293ED34200D5A476 /* XCRemoteSwiftPackageReference "FTWaterFallLayout" */,
+				2ACF135B293ED4A400D5A476 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = 2A52C09D2693F22A003DFE48 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -128,6 +171,7 @@
 				2A52C0AC2693F22A003DFE48 /* LaunchScreen.storyboard in Resources */,
 				2A52C0A92693F22A003DFE48 /* Assets.xcassets in Resources */,
 				2A52C0A72693F22A003DFE48 /* Main.storyboard in Resources */,
+				2ACF135A293ED3D000D5A476 /* HomeCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,7 +184,7 @@
 			files = (
 				2A52C0A42693F22A003DFE48 /* ViewController.swift in Sources */,
 				2A52C0A02693F22A003DFE48 /* AppDelegate.swift in Sources */,
-				2A52C0A22693F22A003DFE48 /* SceneDelegate.swift in Sources */,
+				2ACF1359293ED3D000D5A476 /* HomeCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,7 +346,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.liufengting.Demo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.liufengting.demoss;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -330,7 +374,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.liufengting.Demo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.liufengting.demoss;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -360,6 +404,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2ACF1354293ED34200D5A476 /* XCRemoteSwiftPackageReference "FTWaterFallLayout" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/liufengting/FTWaterFallLayout";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.0.9;
+			};
+		};
+		2ACF135B293ED4A400D5A476 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2ACF1355293ED34200D5A476 /* FTWaterFallLayout */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2ACF1354293ED34200D5A476 /* XCRemoteSwiftPackageReference "FTWaterFallLayout" */;
+			productName = FTWaterFallLayout;
+		};
+		2ACF135C293ED4A400D5A476 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2ACF135B293ED4A400D5A476 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2A52C0942693F22A003DFE48 /* Project object */;
 }
